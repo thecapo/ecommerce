@@ -17,7 +17,7 @@ export async function connectToDb() {
 // export mongodb_user=carlo_db_user
 // export mongodb_password=password
 
-  const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.io06vy9.mongodb.net/?appName=Cluster0`;
+  const uri = `${process.env.MONGODB_URI}`;
 
   const client = new MongoClient(uri, {
     serverApi: {
