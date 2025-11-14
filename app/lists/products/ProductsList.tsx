@@ -59,7 +59,7 @@ export default function ProductsList({ products, initialCartProducts = [] }: { p
           </div>
           <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
           <p className="text-gray-600">${product.price}</p>
-          <p className="text-gray-600">${product.description}</p>
+          <p className="text-gray-600">{product.description}</p>
           {productIsInCart(product.id)
             ? (
               <button

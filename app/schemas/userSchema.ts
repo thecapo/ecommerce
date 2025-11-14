@@ -4,6 +4,7 @@ import mongoose, { Schema, Document, model } from 'mongoose';
 export interface IUser extends Document {
   name: string;
   email: string;
+  imageUrl?: string;
   age?: number;
   createdAt: Date;
 }
@@ -17,6 +18,7 @@ const UserSchema = new Schema<IUser>({
     match: [/^.+@.+\..+$/, 'Invalid email format'],
     unique: true
   },
+  imageUrl: { type: String },
   age: { type: Number, min: 0 },
   createdAt: { type: Date, default: Date.now }
 });
